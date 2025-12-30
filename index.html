@@ -46,12 +46,13 @@
     </div>
   
 
-<script src="src/system.bundle.js"></script>
+<script src="src/system.bundle.js" charset="utf-8"></script>
 
 <script>
-  // 🔥 FIX SYSTEMJS FOR COCOS + GITHUB PAGES
+  // FIX SystemJS for GitHub Pages subfolder
   System.baseURL = './';
 
+  // 🔥 BẮT BUỘC: map module "cc"
   System.config({
     map: {
       cc: './cocos-js/cc.js'
