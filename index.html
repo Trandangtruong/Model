@@ -46,12 +46,17 @@
     </div>
   
 
-<!-- Polyfills bundle. -->
 <script src="src/system.bundle.js"></script>
 
 <script>
-  // 🔥 FIX SYSTEMJS BASE PATH FOR GITHUB PAGES
+  // 🔥 FIX SYSTEMJS FOR COCOS + GITHUB PAGES
   System.baseURL = './';
+
+  System.config({
+    map: {
+      cc: './cocos-js/cc.js'
+    }
+  });
 </script>
 
 <script>
@@ -59,6 +64,7 @@
     console.error(err);
   });
 </script>
+
 
 
 <script>
